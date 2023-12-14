@@ -24,10 +24,6 @@ resource "kind_cluster" "this" {
       }
     }
 
-    node {
-      role = "worker"
-    }
-
     networking {
       disable_default_cni = true
       pod_subnet          = var.pod_subnet
