@@ -14,3 +14,8 @@ variable "pod_subnet" {
 variable "service_subnet" {
   type = string
 }
+
+variable "nodes_number" {
+  type    = number
+  default = 1
+}

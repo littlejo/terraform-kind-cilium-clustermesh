@@ -5,6 +5,7 @@ module "kind" {
   name           = each.value.name
   pod_subnet     = each.value.pod_subnet
   service_subnet = each.value.service_subnet
+  nodes_number   = 1
 }
 
 module "cilium_clustermesh1" {
