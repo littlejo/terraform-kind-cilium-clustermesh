@@ -10,8 +10,8 @@ module "kind" {
 module "cilium_clustermesh1" {
   source          = "./modules/cilium-clustermesh"
   cluster_name    = var.kind.mesh1.name
-  cluster_id      = 1
-  release_version = "1.14.4"
+  cluster_id      = var.cilium.mesh1.cluster_id
+  release_version = var.cilium.mesh1.version
   service_type    = "NodePort"
 
   providers = {
@@ -22,8 +22,8 @@ module "cilium_clustermesh1" {
 module "cilium_clustermesh2" {
   source          = "./modules/cilium-clustermesh"
   cluster_name    = var.kind.mesh2.name
-  cluster_id      = 2
-  release_version = "1.14.4"
+  cluster_id      = var.cilium.mesh2.cluster_id
+  release_version = var.cilium.mesh2.version
   service_type    = "NodePort"
 
   providers = {

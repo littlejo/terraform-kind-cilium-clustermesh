@@ -28,3 +28,17 @@ variable "kind" {
     }
   }
 }
+
+variable "cilium" {
+  type = map(any)
+  default = {
+    mesh1 = {
+      cluster_id = 1
+      version    = "1.14.4"
+    }
+    mesh2 = {
+      cluster_id = 2
+      version    = "1.14.4"
+    }
+  }
+}

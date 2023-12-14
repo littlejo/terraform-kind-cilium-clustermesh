@@ -33,6 +33,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_cilium"></a> [cilium](#input\_cilium) | n/a | `map(any)` | <pre>{<br>  "mesh1": {<br>    "cluster_id": 1,<br>    "version": "1.14.4"<br>  },<br>  "mesh2": {<br>    "cluster_id": 2,<br>    "version": "1.14.4"<br>  }<br>}</pre> | no |
 | <a name="input_kind"></a> [kind](#input\_kind) | n/a | `map(any)` | <pre>{<br>  "mesh1": {<br>    "extra_port_mappings": [<br>      {<br>        "container_port": 32042,<br>        "host_port": 32042<br>      },<br>      {<br>        "container_port": 31234,<br>        "host_port": 31234<br>      },<br>      {<br>        "container_port": 31235,<br>        "host_port": 31235<br>      }<br>    ],<br>    "name": "clustermesh1",<br>    "pod_subnet": "10.1.0.0/16",<br>    "service_subnet": "172.20.1.0/24"<br>  },<br>  "mesh2": {<br>    "extra_port_mappings": [],<br>    "name": "clustermesh2",<br>    "pod_subnet": "10.2.0.0/16",<br>    "service_subnet": "172.20.2.0/24"<br>  }<br>}</pre> | no |
 
 ## Outputs
