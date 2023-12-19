@@ -1,5 +1,5 @@
 resource "cilium" "this" {
-  helm_set = [
+  set = [
     "cluster.name=${var.cluster_name}",
     "cluster.id=${var.cluster_id}",
     "ipam.mode=kubernetes",
