@@ -6,7 +6,7 @@ terraform {
     }
     cilium = {
       source  = "littlejo/cilium"
-      version = "0.0.5"
+      version = "~> 0.1.0"
     }
   }
   required_version = ">= 1.3"
