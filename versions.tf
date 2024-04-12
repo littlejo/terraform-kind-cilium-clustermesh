@@ -15,16 +15,11 @@ terraform {
 provider "kind" {}
 
 provider "cilium" {
-  alias       = "mesh1"
-  config_path = module.kind["mesh1"].kubeconfig_path
+  alias   = "mesh1"
+  context = module.kind["mesh1"].context
 }
 
 provider "cilium" {
-  alias       = "mesh2"
-  config_path = module.kind["mesh2"].kubeconfig_path
-}
-
-provider "cilium" {
-  alias   = "global"
-  context = terraform_data.context1.input
+  alias   = "mesh2"
+  context = module.kind["mesh2"].context
 }

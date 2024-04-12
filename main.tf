@@ -18,6 +18,8 @@ module "cilium_clustermesh1" {
   providers = {
     cilium = cilium.mesh1
   }
+
+  depends_on = [module.kind]
 }
 
 module "cilium_clustermesh2" {
@@ -30,18 +32,13 @@ module "cilium_clustermesh2" {
   providers = {
     cilium = cilium.mesh2
   }
-}
 
-resource "terraform_data" "context1" {
-  input = "kind-${var.kind.mesh1.name}"
-  depends_on = [
-    module.kind,
-  ]
+  depends_on = [module.kind]
 }
 
 resource "cilium_clustermesh_connection" "this" {
   destination_context = "kind-${var.kind.mesh2.name}"
-  provider            = cilium.global
+  provider            = cilium.mesh1
   depends_on = [
     module.cilium_clustermesh1,
     module.cilium_clustermesh2,

@@ -4,15 +4,14 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
-| <a name="requirement_cilium"></a> [cilium](#requirement\_cilium) | ~> 0.1.0 |
-| <a name="requirement_kind"></a> [kind](#requirement\_kind) | 0.2.1 |
+| <a name="requirement_cilium"></a> [cilium](#requirement\_cilium) | ~> 0.2.0 |
+| <a name="requirement_kind"></a> [kind](#requirement\_kind) | 0.4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cilium.global"></a> [cilium.global](#provider\_cilium.global) | 0.1.0 |
-| <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
+| <a name="provider_cilium.mesh1"></a> [cilium.mesh1](#provider\_cilium.mesh1) | 0.2.0 |
 
 ## Modules
 
@@ -27,7 +26,6 @@
 | Name | Type |
 |------|------|
 | [cilium_clustermesh_connection.this](https://registry.terraform.io/providers/littlejo/cilium/latest/docs/resources/clustermesh_connection) | resource |
-| [terraform_data.context1](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
 
 ## Inputs
 
