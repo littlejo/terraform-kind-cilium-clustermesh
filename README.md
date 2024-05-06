@@ -11,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cilium.mesh1"></a> [cilium.mesh1](#provider\_cilium.mesh1) | 0.2.0 |
+| <a name="provider_cilium.mesh1"></a> [cilium.mesh1](#provider\_cilium.mesh1) | 0.2.1 |
 
 ## Modules
 

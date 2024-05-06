@@ -1,3 +1,8 @@
+locals {
+  cert = module.cilium_clustermesh1.cilium_ca["crt"]
+  key  = module.cilium_clustermesh1.cilium_ca["key"]
+}
+
 module "kind" {
   source = "./modules/kind"
 
@@ -28,6 +33,7 @@ module "cilium_clustermesh2" {
   cluster_id      = var.cilium.mesh2.cluster_id
   release_version = var.cilium.mesh2.version
   service_type    = "NodePort"
+  extra_set       = ["tls.ca.cert=${local.cert}", "tls.ca.key=${local.key}"]
 
   providers = {
     cilium = cilium.mesh2
