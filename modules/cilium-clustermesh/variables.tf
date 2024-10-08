@@ -6,6 +6,12 @@ variable "cluster_id" {
   type = string
 }
 
+
+variable "extra_set" {
+  type    = list(string)
+  default = []
+}
+
 variable "release_version" {
   type = string
 }

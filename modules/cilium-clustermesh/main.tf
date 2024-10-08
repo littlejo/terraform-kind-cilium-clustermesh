@@ -1,9 +1,9 @@
 resource "cilium" "this" {
-  set = [
+  set = concat([
     "cluster.name=${var.cluster_name}",
     "cluster.id=${var.cluster_id}",
     "ipam.mode=kubernetes",
-  ]
+  ], var.extra_set)
   version = var.release_version
 }
 
